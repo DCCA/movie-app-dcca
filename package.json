@@ -18,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/DCCA/movie-app-dcca/issues"
   },
-  "homepage": "https://github.com/DCCA/movie-app-dcca#readme"
+  "homepage": "https://github.com/DCCA/movie-app-dcca#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-eslint": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0"
+  }
 }
