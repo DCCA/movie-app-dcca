@@ -1,0 +1,28 @@
+<%- include('./partials/header'); -%>
+<section class='col-8 col-mx-auto'>
+	<h1>
+		Welcome to Result Page!
+	</h1>
+	<div class='columns'>
+	<% if(jData['Response'] === 'True'){ %>
+		<% jData['Search'].forEach((movie) => { %>
+			<div class="card col-4">
+  				<div class="card-image">
+    				<img src="<%= movie['Poster']%>" class="img-responsive">
+  				</div>
+  				<div class="card-header">
+    				<div class="card-title h5"><%= movie['Title'] %></div>
+  				</div>
+			</div>
+		<%	}) %>
+	<% } else{ %>
+			<div class="col-12">
+				<p>
+					Sorry, no movie was founded. Try again!
+				</p>
+			</div>	
+	<% } %>
+	</div>
+</section>
+
+<%- include('./partials/footer'); -%>

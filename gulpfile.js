@@ -2,7 +2,8 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       cssnano = require('gulp-cssnano'),
       autoprefixer = require('gulp-autoprefixer'),
-      sass = require('gulp-sass');
+      sass = require('gulp-sass'),
+      terser = require('gulp-terser');
 
 gulp.task('sass', function(){
     return gulp
@@ -16,11 +17,19 @@ gulp.task('sass', function(){
         )
         .pipe(cssnano())
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./build/css',))
+        .pipe(gulp.dest('./public/css',))
 })
 
-gulp.task('watch', function() {
-    gulp.watch('./sass/*.scss', gulp.series('sass'));
+gulp.task('scripts', function(){
+  return gulp.src('./js/script.js')
+    .pipe(terser())
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(gulp.dest('./public/js'))
 });
 
-gulp.task('default', gulp.parallel('sass'));
+gulp.task('watch', function() {
+	gulp.watch('js/*.js', gulp.series('scripts'));
+    gulp.watch('./scss/*.scss', gulp.series('sass'));
+});
+
+gulp.task('default', gulp.parallel('sass', 'scripts', 'watch'));
