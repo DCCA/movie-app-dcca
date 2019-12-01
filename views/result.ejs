@@ -3,26 +3,26 @@
 	<h1>
 		Welcome to Result Page!
 	</h1>
-	<div class='columns'>
+	<ul class='columns'>
 	<% if(jData['Response'] === 'True'){ %>
 		<% jData['Search'].forEach((movie) => { %>
-			<div class="card col-4">
+			<li class="movie card col-4" name='<%= movie['imdbID'] %>'>
   				<div class="card-image">
     				<img src="<%= movie['Poster']%>" class="img-responsive">
   				</div>
   				<div class="card-header">
     				<div class="card-title h5"><%= movie['Title'] %></div>
   				</div>
-			</div>
+			</li>
 		<%	}) %>
 	<% } else{ %>
-			<div class="col-12">
+			<li class="col-12">
 				<p>
-					Sorry, no movie was founded. Try again!
+					Sorry, no movies found. Try again!
 				</p>
-			</div>	
+			</li>	
 	<% } %>
-	</div>
+	</ul>
 </section>
 
 <%- include('./partials/footer'); -%>
