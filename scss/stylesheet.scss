@@ -1,2 +1,63 @@
 @import 'css-reset.scss';
 
+$primary-color: #f39c12;
+$border-color: #f39c12;
+$font-size: 16px;
+
+body{
+	padding: 1em;
+	.btn.btn-primary{
+		background-color: $primary-color;
+		    border-color: $border-color;
+	}
+	i{
+		color: $primary-color;
+		font-size: $font-size;
+	}
+	.fa-github-square:before {
+    	font-size: 2em;
+		color: #34495e;
+	}
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+footer{
+	.github{
+		margin-right: 0.4em;
+	}
+	a{
+		vertical-align: middle;
+	}
+}
+
+.logo{
+	height: 20em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.search-box{
+	margin: 1em auto;
+}
+
+// Specifics selectors
+li.movie.card.col-12{
+	border: none;
+	border-radius: 0.5rem;
+	height: 16em;
+	// background-position: center;
+	background-size: cover;
+}
+
+div.card-header{
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 0.5em 0.5em 0 0;
+}

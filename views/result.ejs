@@ -1,15 +1,12 @@
 <%- include('./partials/header'); -%>
-<section class='col-8 col-mx-auto'>
+<section class='col-10 col-mx-auto'>
 	<h1>
-		Welcome to Result Page!
+		Result Page!
 	</h1>
 	<ul class='columns'>
 	<% if(jData['Response'] === 'True'){ %>
 		<% jData['Search'].forEach((movie) => { %>
-			<li class="movie card col-4" name='<%= movie['imdbID'] %>'>
-  				<div class="card-image">
-    				<img src="<%= movie['Poster']%>" class="img-responsive">
-  				</div>
+			<li class="movie card col-12" name='<%= movie['imdbID'] %>' style='background-image: url("<%= movie['Poster']%>");'>
   				<div class="card-header">
     				<div class="card-title h5"><%= movie['Title'] %></div>
   				</div>

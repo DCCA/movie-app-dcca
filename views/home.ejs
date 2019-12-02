@@ -1,15 +1,19 @@
 <%- include('./partials/header'); -%>
-<section class='col-8 col-mx-auto'>
-	<h1>
-		Welcome to the Movie App Search!
-	</h1>
-	<p>
-		Search for your movie:
-	</p>
 
-	<form action='/result' method='GET' class="input-group input-inline col-12">
-    	<input class="form-input" type="text" placeholder="search" name='search'>
-		<input class="btn btn-primary input-group-btn" type='submit' value='Submit'>
-	</form>
+<section class='col-10 col-mx-auto'>
+	<div class='logo col-10 col-mx-auto'>
+		<img class='img-responsive' src='assets/movie-app-logo.jpg'>
+	</div>
+	<div class='search-box col-12 col-mx-auto'>
+		<p>
+		Search for your movie:
+		</p>
+		<form action='/result' method='GET' class="input-group input-inline col-12">
+    		<input class="form-input" type="text" placeholder="search" name='search'>
+			<input class="btn btn-primary input-group-btn" type='submit' value='Submit'>
+		</form>
+	</div>
+	
 </section>
+
 <%- include('./partials/footer'); -%>
