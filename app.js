@@ -19,8 +19,6 @@ app.get('/movie-detail', (req, res) => {
 		if(!error && response.statusCode == 200){
 			let jData = JSON.parse(body);
 			res.render('movie-detail', {jData: jData});
-			console.log(jData);
-			console.log(jData['Response']);
 		   }  		
 	})
 });
