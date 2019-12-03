@@ -1,19 +1,19 @@
 <%- include('./partials/header'); -%>
 <section class='col-10 col-mx-auto'>
 	<h1>
-		Result Page!
+		Results
 	</h1>
-	<ul class='columns'>
+	<ul>
 	<% if(jData['Response'] === 'True'){ %>
 		<% jData['Search'].forEach((movie) => { %>
-			<li class="movie card col-12" name='<%= movie['imdbID'] %>' style='background-image: url("<%= movie['Poster']%>");'>
-  				<div class="card-header">
-    				<div class="card-title h5"><%= movie['Title'] %></div>
+			<li class="movie card col-11 col-mx-auto" value='<%= movie['imdbID'] %>' style='background-image: url("<%= movie['Poster']%>");'>
+  				<div class="card-header" value='<%= movie['imdbID'] %>'>
+    				<div class="card-title h5" value='<%= movie['imdbID'] %>'><%= movie['Title'] %></div>
   				</div>
 			</li>
 		<%	}) %>
 	<% } else{ %>
-			<li class="col-12">
+			<li class="col-11 col-mx-auto">
 				<p>
 					Sorry, no movies found. Try again!
 				</p>

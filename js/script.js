@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(){
 	const movieList = document.querySelectorAll('.movie');
-	console.log(movieList)
+	console.log(movieList);
 	movieList.forEach( (element) => {
 		element.addEventListener('click', (event) => {
-			let clickedMovieId = event.path[2].attributes[1].nodeValue;
+			console.log(event);
+			let clickedMovieId = event.target.attributes[2].value;
 			var url = "movie-detail?id=" + encodeURIComponent(clickedMovieId);
             window.location.href = url;
 		});
