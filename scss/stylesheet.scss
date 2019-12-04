@@ -46,12 +46,17 @@ nav{
 			a{
 				&:link {
   					text-decoration: none;
-					color: black;
+					color: white;
 				}
 				&:visited {
   					text-decoration: none;
-					color: black;
+					color: white;
 				}
+				color: white;
+				background-color: black;
+				border: 0.05rem solid;
+				padding: 0.6rem;
+				border-radius: 0.4rem;
 			}
 		}
 	}
