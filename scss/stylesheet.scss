@@ -21,7 +21,10 @@ nav{
 		flex-direction: row;
 		width: 100%;
 		li{
-			width: 10%;
+			&.back-btn{
+				width: 4%;
+			}
+			width: 40%;
 			padding: 1rem;
 			a{
 				&:link {

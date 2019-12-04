@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 	const movieList = document.querySelectorAll('.movie');
+	const backBtn = document.querySelector('.back-btn');
 	console.log(movieList);
 	movieList.forEach( (element) => {
 		element.addEventListener('click', (event) => {
@@ -8,5 +9,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			var url = "movie-detail?id=" + encodeURIComponent(clickedMovieId);
 			window.location.href = url;
 		});
+	});
+	backBtn.addEventListener('click', () => {
+		 window.history.back();
 	});
 });
