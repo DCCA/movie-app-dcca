@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	movieList.forEach( (element) => {
 		element.addEventListener('click', (event) => {
 			console.log(event);
-			let clickedMovieId = event.target.attributes[2].value;
+			let clickedMovieId = event.target.attributes[1].value;
 			var url = "movie-detail?id=" + encodeURIComponent(clickedMovieId);
-            window.location.href = url;
+			window.location.href = url;
 		});
 	});
 });
