@@ -5,8 +5,13 @@ $border-color: #f39c12;
 $font-size: 16px;
 $font-family: 'Ubuntu', sans-serif;;
 
-body{
+html, 
+body {
+    height: 100%;
 	font-family: $font-family;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 nav{
@@ -30,6 +35,10 @@ nav{
 			}
 		}
 	}
+}
+
+.bold{
+	font-weight: 700;
 }
 
 .search-section{
@@ -77,6 +86,8 @@ nav{
 footer{
 	background-color: $primary-color;
 	padding: 2rem 0;
+	text-align: center;
+	bottom: 0;
 }
 
 .movie-list{
@@ -92,6 +103,59 @@ footer{
 	.card-title{
 		height: 100%;
 	}
+	}
+}
+
+.detail{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.poster{
+		margin-top: 4rem;
+		height: 24rem;
+		width: 15.5rem;
+		background-size: cover;
+		border-radius: 1rem;
+		box-shadow: 6px 10px 44px 2px rgba(0,0,0,0.54);
+	}
+	.movie-info{
+		margin-top: 0.4rem;
+		padding: 3rem;
+		.basic-info{
+			h1{
+				font-weight: 700;
+				font-size: ($font-size * 1.4);
+			}
+			p{
+				font-size: ($font-size * 0.8);
+				color: #7f8c8d;
+			}
+			text-align: center;
+		}
+		.score{
+			height: 4rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 2rem;
+			vertical-align: middle;
+			p{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			img{
+				height: 2.4rem;
+				&#imdb-logo{
+					width: 4rem;
+				}
+			}
+		}
+		.plot{
+			margin: 2rem 0;
+		}
 	}
 }
 

@@ -1,25 +1,37 @@
 <%- include('./partials/header'); -%>
-<section class='col-11 col-mx-auto'>
+<section class='detail'>
 	<div class='poster' style='background-image: url("<%= jData['Poster'] %>")'>
 		
 	</div>
-	<h2>
-		<%= jData['Title'] %>
-	</h2>
-	<p>
-		<%= jData["Plot"] %>
-	</p>
-	<p>
-		Released: <%= jData["Released"] %>
-	</p>
-	<p>
-		Director: <%= jData["Director"] %>
-	</p>
-	<p>
-		Metascore: <%= jData["Metascore"] %>
-	</p>
-	<p>
-		IMDB Rating: <%= jData["imdbRating"] %>
-	</p>
+	<section class='movie-info'>
+		<div class='basic-info'>
+			<h1>
+				<%= jData['Title'] %>
+			</h1>
+			<p>
+			Director: <%= jData["Director"] %>
+			</p>
+			<p>
+				Released: <%= jData["Released"] %>
+			</p>
+		</div>
+		<div class='score'>
+			<p>
+				<img src='assets/metacritic_logo.svg'> &nbsp; <%= jData["Metascore"] %>
+			</p>
+			<p>
+				<img id='imdb-logo' src='assets/IMDB_Logo_2016.svg'> &nbsp; <%= jData["imdbRating"] %>
+			</p>
+		</div>
+		<div class='plot'>
+			<p>
+				<span class='bold'>Plot</span>
+			</p>
+			<p>
+			<%= jData["Plot"] %>
+			</p>
+		</div>
+	</section>
+
 </section>
 <%- include('./partials/footer'); -%>
