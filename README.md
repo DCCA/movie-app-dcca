@@ -1,7 +1,8 @@
 # Movie App
 
-This is was made using HTML5, CSS3, Javascript, Node.js, Express, SASS.
-For the movies information i used the OMDB free api.
+This app was made using HTML5, CSS3, Javascript, Node.js, Express and SASS.
+For the movies information I used the OMDB free api.
+I have also used Gulp for compilation of the SCSS and JS.
 
 ## Try Yourself
 
