@@ -30,7 +30,6 @@ app.get('/result', (req, res) => {
 		if(!error && response.statusCode == 200){
 			let jData = JSON.parse(body);
 			res.render('result', {jData: jData});
-			console.log(jData);
 		   	}  		
 	})
 });

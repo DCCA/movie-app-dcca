@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			window.location.href = url;
 		});
 	});
-	backBtn.addEventListener('click', () => {
+	if(backBtn !== null){
+	   backBtn.addEventListener('click', () => {
 		 window.history.back();
 	});
+	}
 });
