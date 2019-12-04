@@ -1,13 +1,13 @@
 <%- include('./partials/header'); -%>
-<section class='col-11 col-mx-auto'>
+<section class='results'>
 	<h1>
-		Results
+		We found this movies for you :D
 	</h1>
 	<ul class='movie-list'>
 	<% if(jData['Response'] === 'True'){ %>
 		<% jData['Search'].forEach((movie) => { %>
-			<li class="movie movie-card" value='<%= movie['imdbID'] %>' style='background-image: url("<%= movie['Poster']%>");'>
-    			<div class="card-title" value='<%= movie['imdbID'] %>'><%= movie['Title'] %></div>
+			<li class="movie movie-card" value='<%= movie['imdbID'] %>' style='background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("<%= movie['Poster']%>");'>
+    			<div class="card-title bold" value='<%= movie['imdbID'] %>'><%= movie['Title'] %></div>
 			</li>
 		<%	}) %>
 	<% } else{ %>
