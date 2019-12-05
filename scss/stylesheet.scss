@@ -21,6 +21,12 @@ $tablet-width: 768px;
   }
 }
 
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 // Styles
 html, 
 body {
@@ -68,9 +74,7 @@ nav{
 
 .search-section{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	@include flex-center;
 	.form-box{
 		position: relative;
 		width: 80%;
@@ -92,10 +96,10 @@ nav{
 			padding: 0 0.4rem;
 		}
 		.search-box{
-			font-size: 3rem;
+			font-size: 2rem;
 			border: 0.1rem solid;
 			border-radius: 0.4rem;
-			padding: 0.8rem 0.8rem;
+			padding: 1rem 0.8rem;
 		}
 		.search-button{
 			margin: 1rem 0 8rem 0;
@@ -129,7 +133,6 @@ footer{
 			color: white;
 		}
 	}
-				
 }
 
 .results{
@@ -148,9 +151,7 @@ footer{
 			grid-column: 1/-1;
 		}
 		&.movie-card{
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flex-center;
 			height: 16rem;
 			background-size: cover;
 			border-radius: 1rem;
@@ -174,20 +175,16 @@ footer{
 	}
 }
 
-
-
 .detail{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	@include flex-center;
 	.poster{
 		margin-top: 4rem;
 		height: 24rem;
 		width: 15.5rem;
 		background-size: cover;
 		border-radius: 1rem;
-		box-shadow: 6px 10px 44px 2px rgba(0,0,0,0.54);
+		box-shadow: 0.6rem 1rem 4.4rem 0.2rem rgba(0,0,0,0.54);
 	}
 	.movie-info{
 		@include tablet {
