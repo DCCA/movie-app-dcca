@@ -1,7 +1,11 @@
 <%- include('./partials/header-backbutton'); -%>
 <section class='results'>
 	<h1>
+		<%  if(jData['Response'] === 'True'){  %>
 		We found this movies for you :D
+		<% } else{ %>
+		Sorry, but no movies were found... Try again...
+		<% } %>
 	</h1>
 	<ul class='movie-list'>
 	<% if(jData['Response'] === 'True'){ %>
@@ -11,10 +15,8 @@
 			</li>
 		<%	}) %>
 	<% } else{ %>
-			<li class="col-11 col-mx-auto">
-				<p>
-					Sorry, no movies found. Try again!
-				</p>
+			<li class='movie-card'>
+				<img class='not-found' src='assets/not-found.jpg'>
 			</li>	
 	<% } %>
 	</ul>
