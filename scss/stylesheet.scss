@@ -75,6 +75,7 @@ nav{
 .search-section{
 	display: flex;
 	@include flex-center;
+	flex-direction: column;
 	.form-box{
 		position: relative;
 		width: 80%;
