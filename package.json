@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/DCCA/movie-app-dcca#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.3",
-    "gulp": "^4.0.2",
-    "request": "^2.88.0"
+    "body-parser": "^1.20.8",
+    "ejs": "^3.1.10",
+    "express": "^4.22.3",
+    "gulp": "^5.0.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^7.0.1",
