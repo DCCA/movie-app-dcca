@@ -1,23 +1,21 @@
 const gulp = require('gulp'),
       rename = require('gulp-rename'),
-      cssnano = require('gulp-cssnano'),
-      autoprefixer = require('gulp-autoprefixer'),
-      sass = require('gulp-sass'),
+      postcss = require('gulp-postcss'),
+      autoprefixer = require('autoprefixer'),
+      cssnano = require('cssnano'),
+      sass = require('gulp-sass')(require('sass')),
       terser = require('gulp-terser');
 
 gulp.task('sass', function(){
     return gulp
         .src('./scss/stylesheet.scss')
-        .pipe(sass())
-        // Plugins
-        .pipe(
-            autoprefixer({
-              browsers: ['last 2 versions']
-            })
-        )
-        .pipe(cssnano())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([
+            autoprefixer(),
+            cssnano()
+        ]))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./public/css',))
+        .pipe(gulp.dest('./public/css'))
 })
 
 gulp.task('scripts', function(){
